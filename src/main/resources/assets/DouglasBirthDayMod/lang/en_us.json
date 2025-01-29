@@ -1,5 +1,6 @@
 {
-  "item.douglasbirthdaymod.plushie": "Plushie",
-
-  "block.douglasbirthdaymod.plushie": "Plushie"
+  "block.douglasbirthdaymod.douglasplushie": "Douglas Plushie",
+  "item.douglasbirthdaymod.birthday_helmet": "Birthday Hat",
+  "tooltip.douglasbirthdaymod.birthdayhat.tooltip": "WEAR IT FOR A BIG SUPRISE!",
+  "sounds.douglasbirthdaymod.happy_bday": "WAR SOUNDS"
 }

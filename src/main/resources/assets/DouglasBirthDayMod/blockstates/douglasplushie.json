@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "douglasbirthdaymod:block/douglasplushie"
+    },
+    "facing=east": {
+      "model": "douglasbirthdaymod:block/douglasplushie",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "douglasbirthdaymod:block/douglasplushie",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "douglasbirthdaymod:block/douglasplushie",
+      "y": 270
+    }
+  }
+}

@@ -1,6 +1,7 @@
 package net.neonekiz.douglasbirthdaymod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -11,6 +12,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neonekiz.douglasbirthdaymod.block.ModBlocks;
+import net.neonekiz.douglasbirthdaymod.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -25,6 +28,12 @@ public class DouglasBirthDayMod
     public DouglasBirthDayMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+
+
+        ModItems.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -42,10 +51,16 @@ public class DouglasBirthDayMod
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS){
+            event.accept(ModBlocks.DOUGLASPLUSHIE);
+        }
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(ModItems.BIRTHDAY_HELMET);
+            }
     }
+
+
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

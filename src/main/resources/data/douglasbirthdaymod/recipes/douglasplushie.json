@@ -1,0 +1,21 @@
+{
+"type": "minecraft:crafting_shaped",
+"category": "misc",
+"key": {
+"#": {
+"item": "minecraft:iron_ingot"
+},
+"X": {
+  "item": "minecraft:gunpowder"
+}
+},
+"pattern": [
+"X#X",
+"X#X",
+"###"
+],
+"result": {
+"item": "douglasbirthdaymod:douglasplushie"
+},
+"show_notification": true
+}
